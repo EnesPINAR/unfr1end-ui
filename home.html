@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="/navigationFunctions.js" defer></script>
+    <title>unfr1end | home</title>
+</head>
+<body>
+    <div class="home">
+        <header class="desktopHeader">
+            <div class="brand">
+                <a href="/home.html">
+                    <img src="img/logo.jpeg" alt="logo">
+                    <h3>unfr1end</h3>
+                </a>
+            </div>
+            <div class="search">
+                <div class="searchContainer">
+                    <form action="">
+                        <input type="text" class="searchInput" placeholder="search anything">
+                        <button class="btnSearch"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="/home">home</a>
+                    </li>
+                    <li>
+                        <a href="/login">login</a>
+                    </li>
+                    <li>
+                        <a href="/register">register</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <header class="mobileHeader">
+            <div class="brandMobile">
+                <a href="/home.html">
+                    <img src="img/logo.jpeg" alt="logo">
+                </a>
+            </div>
+            <div class="searchMobileButton">
+                <button class="btnSearchMobile" onclick="openMobileSearch()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="searchMobile">
+                <div class="searchContainer">
+                    <button class="btnClose" onclick="closeMobileSearch()"><i class="fas fa-times"></i></button>
+                    <form action="">
+                        <input type="text" class="searchInput" placeholder="search anything">
+                        <button class="btnSearch"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="navitagionMobileButton">
+                <button class="btnNavigationMobile" onclick="openMobileNavigation()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="navigationMobileContainer">
+                <button class="btnClose" onclick="closeMobileNavigation()"><i class="fas fa-times"></i></button>
+                <nav class="navigationMobile">
+                    <ul>
+                        <li>
+                            <a href="/home">home</a>
+                        </li>
+                        <li>
+                            <a href="/login">login</a>
+                        </li>
+                        <li>
+                            <a href="/register">register</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div class="leftMenu">
+                <div class="popularStates">
+                    <div class="contentHeader">
+                        <h5>popular states</h5>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                        <li>
+                            <a href="/example">example</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="advertising">
+                    <div class="post">
+                        ad here
+                    </div>
+                </div>
+            </div>
+            <div class="unfr1endList">
+                <div class="advertising">
+                    <div class="post">
+                        ad here
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <div class="post">
+                            <div class="postHeader">
+                                <div class="author">
+                                    name here 🇹🇷
+                                </div>
+                                <div class="actions">
+                                    <a href="/like" class="like">
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                    <a href="/comment" class="comment">
+                                        <i class="far fa-comment"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="postContent">
+                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                    lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                </p>
+                                <button class="btnType1"><a href="/post"><i class="fas fa-arrow-right"></i></a></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post">
+                            <div class="postHeader">
+                                <div class="author">
+                                    name here 🇹🇷
+                                </div>
+                                <div class="actions">
+                                    <a href="/like" class="like">
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                    <a href="/comment" class="comment">
+                                        <i class="far fa-comment"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="postContent">
+                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                    lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                </p>
+                                <button class="btnType1"><a href="/post"><i class="fas fa-arrow-right"></i></a></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post">
+                            <div class="postHeader">
+                                <div class="author">
+                                    name here 🇹🇷
+                                </div>
+                                <div class="actions">
+                                    <a href="/like" class="like">
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                    <a href="/comment" class="comment">
+                                        <i class="far fa-comment"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="postContent">
+                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                    lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                </p>
+                                <button class="btnType1"><a href="/post"><i class="fas fa-arrow-right"></i></a></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="post">
+                            <div class="postHeader">
+                                <div class="author">
+                                    name here 🇹🇷
+                                </div>
+                                <div class="actions">
+                                    <a href="/like" class="like">
+                                        <i class="far fa-heart"></i>
+                                    </a>
+                                    <a href="/comment" class="comment">
+                                        <i class="far fa-comment"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="postContent">
+                                <p>lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                    lorem ipsum dolor sit amet consectetur adipisicing elit. corporis debitis at cum, maxime maiores repellat consectetur perspiciatis. quasi, at iure.
+                                </p>
+                                <button class="btnType1"><a href="/post"><i class="fas fa-arrow-right"></i></a></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

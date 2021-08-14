@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="/navigationFunctions.js" defer></script>
+    <title>unfr1end | login</title>
+</head>
+<body>
+    <div class="loginregister">
+        <header class="desktopHeader">
+            <div class="brand">
+                <a href="/home.html">
+                    <img src="img/logo.jpeg" alt="logo">
+                    <h3>unfr1end</h3>
+                </a>
+            </div>
+            <div class="search">
+                <div class="searchContainer">
+                    <form action="">
+                        <input type="text" class="searchInput" placeholder="search anything">
+                        <button class="btnSearch"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="/home">home</a>
+                    </li>
+                    <li>
+                        <a href="/login">login</a>
+                    </li>
+                    <li>
+                        <a href="/register">register</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <header class="mobileHeader">
+            <div class="brandMobile">
+                <a href="/home.html">
+                    <img src="img/logo.jpeg" alt="logo">
+                </a>
+            </div>
+            <div class="searchMobileButton">
+                <button class="btnSearchMobile" onclick="openMobileSearch()"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="searchMobile">
+                <div class="searchContainer">
+                    <button class="btnClose" onclick="closeMobileSearch()"><i class="fas fa-times"></i></button>
+                    <form action="">
+                        <input type="text" class="searchInput" placeholder="search anything">
+                        <button class="btnSearch"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="navitagionMobileButton">
+                <button class="btnNavigationMobile" onclick="openMobileNavigation()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="navigationMobileContainer">
+                <button class="btnClose" onclick="closeMobileNavigation()"><i class="fas fa-times"></i></button>
+                <nav class="navigationMobile">
+                    <ul>
+                        <li>
+                            <a href="/home">home</a>
+                        </li>
+                        <li>
+                            <a href="/login">login</a>
+                        </li>
+                        <li>
+                            <a href="/register">register</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="container">
+            <div class="loginregisterContainer">
+                <div class="contentHeader">
+                    <h5>login</h5>
+                </div>
+                <div class="loginregisterContent">
+                    <input type="text" placeholder="e-mail">
+                    <input type="password" placeholder="password">
+                    <div class="loginregisterActions">
+                        <div class="remindMe">
+                            <input type="checkbox">
+                            <a href="/remindme">remind me</a>
+                        </div>
+                        <div class="forgotPassword">
+                            <a href="/forgotpassword">forgot password?</a>
+                        </div>
+                    </div>
+                    <button class="btnType1">login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

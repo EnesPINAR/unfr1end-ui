@@ -1,0 +1,742 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+    height: 100%;
+    overflow: auto;
+}
+body {
+    display: flex;
+    flex-direction: column;
+	line-height: 1;
+    font-family: 'PT Sans', sans-serif;
+    overflow: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:focus {
+    outline: none;
+}
+
+$ufwhite: #FFFFFF;
+$ufblack: #000000;
+$ufgreen: #00CC08;
+$ufred: #EC0000;
+$ufgray: #F2F2F2;
+$ufborder: #C4C4C4;
+
+h1, h2, h3, h4, h5, p, ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    color: $ufblack !important;
+    text-decoration: none !important;
+    &:hover {
+        color: $ufgreen !important;
+    }
+}
+
+a.like {
+    color: $ufred !important;
+}
+
+a.comment {
+    color: $ufgreen !important;
+}
+
+* {text-transform: lowercase};
+
+input {
+    padding: 0.5rem;
+    color: $ufblack;
+    background: $ufgray;
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    &:focus {
+        border-color: $ufgreen;
+    }
+}
+
+input.searchInput {
+    padding: 0.5rem;
+    color: $ufblack;
+    background: $ufgray;
+    border: 1px solid $ufborder;
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    &:focus {
+        border-color: $ufgreen;
+    }
+}
+
+button.btnType1 {
+    padding: 0.5rem;
+    border: 1px solid $ufgreen;
+    border-radius: 0.5rem;
+    background: $ufgreen;
+    color: $ufwhite !important;
+    &:hover {
+        border-color: $ufborder;
+        background: $ufwhite;
+        color: $ufblack !important;
+        a {
+            color: $ufblack !important;
+        }
+    }
+    a {
+        color: $ufwhite !important;
+    }
+}
+
+button.btnType2 {
+    padding: 0.5rem;
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    background: $ufwhite;
+    color: $ufblack !important;
+    &:hover {
+        border-color: $ufgreen;
+        background: $ufgreen;
+        color: $ufwhite !important;
+        a {
+            color: $ufwhite !important;
+        }
+    }
+    a {
+        color: $ufblack !important;
+    }
+}
+
+button.btnSearch {
+    padding: 0.5rem;
+    color: $ufblack;
+    background: $ufgray;
+    border: 1px solid $ufborder;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: grid;
+    place-items: center;
+    &:hover {
+        border-color: $ufgreen;
+    }
+}
+
+button.btnSearchMobile, button.btnNavigationMobile, .btnClose {
+    padding: 0.5rem;
+    color: $ufblack;
+    background: $ufgray;
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    &:hover {
+        border-color: $ufgreen;
+    }
+}
+
+button.btnClose {
+    margin: 0;
+}
+
+button.btnTypeCancel {
+    padding: 0.5rem;
+    border: 1px solid $ufred;
+    border-radius: 0.5rem;
+    background: $ufred;
+    color: $ufwhite !important;
+    &:hover {
+        border-color: $ufborder;
+        background: $ufwhite;
+        color: $ufblack !important;
+        a {
+            color: $ufblack !important;
+        }
+    }
+    a {
+        color: $ufwhite !important;
+    }
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $ufborder;
+    background: $ufwhite;
+    .brand, .search, .navigation, .brandMobile, .searchMobileButton, .navitagionMobileButton {
+        width: 33.3333333%;
+        display: flex;
+        align-items: center;
+    }
+    .brand {
+        justify-content: flex-start;
+        a {
+            display: flex;
+            align-items: center;
+            img {
+                width: 50px;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+    .brandMobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+            width: 50px;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 0.5rem;
+        }
+    }
+    .search {
+        justify-content: center;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        .searchContainer {
+            display: flex;
+            form {
+                display: flex;
+            }
+        }
+    }
+    .searchMobileButton {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .searchMobile {
+        display: none;
+        width: 100%;
+        z-index: 101;
+        .searchContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+            form {
+                display: flex;
+            }
+        }
+    }
+    .navigation {
+        justify-content: flex-end;
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            li {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .navitagionMobileButton {
+        display: none;
+        @media screen and (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    .navigationMobileContainer {
+        display: none;
+        @media screen and (max-width: 767px) {
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            width: 100%;
+        }
+        .navigationMobile {
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                li:not(:last-of-type) {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .brandMobile, .searchMobileButton, .navigationMobileButton {
+            width: 33.3333333%;
+        }
+    }
+}
+
+header.desktopHeader {
+    display: flex;
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+header.mobileHeader {
+    display: none;
+    @media screen and (max-width: 767px) {
+        display: flex;
+    }
+}
+
+.container {
+    margin-top: calc(75px + 1rem);
+    display: flex;
+    padding-bottom: 1rem;
+    @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.contentHeader {
+    height: 75px;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid $ufborder;
+    display: grid;
+    place-items: center;
+}
+
+.leftMenu {
+    width: 30%;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+}
+
+.popularStates {
+    height: fit-content;
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    ul {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        li {
+            display: flex;
+            background: $ufwhite;
+            &:nth-child(even) {
+                background: $ufgray;
+            }
+            &:last-of-type {
+                border-bottom-left-radius: 0.5rem;
+                border-bottom-right-radius: 0.5rem;
+            }
+            a{
+                padding: 1rem;
+                width: 100%;
+                &:last-of-type {
+                    border-bottom-left-radius: 0.5rem;
+                    border-bottom-right-radius: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.unfr1endList {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 9.4rem;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .advertising {
+        margin-bottom: 2rem;
+    }
+    ul {
+        li {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.home {
+    .unfr1endList {
+        margin: 0;
+    }
+}
+
+.singlePost {
+    .unfr1endList {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 9.4rem;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            flex-direction: column-reverse;
+            padding: 0;
+            margin: 0;
+        }
+        .advertising {
+            margin-top: 0rem;
+            @media screen and (max-width: 767px) {
+                margin-top: 2rem;
+                order: 1;
+            }
+        }
+        .post {
+            @media screen and (max-width: 767px) {
+                order: 3;
+            }
+        }
+        .commentsContainer {
+            order: 2;
+        }
+        ul {
+            li {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+.post {
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    .postHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        .actions {
+            a {
+                i {
+                    font-size: 1.5rem;
+                }
+            }
+            a:first-of-type {
+                margin-right: 1rem;
+            }
+        }
+    }
+    .postContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+        .btnType1 {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.singlePost {
+    .postContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            overflow: visible;
+            display: block;
+        }
+        .btnType1 {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.loginregister  {
+    height: 100vh;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 75px - 1rem);
+        padding-bottom: 1rem;
+    }
+    .loginregisterContainer {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid $ufborder;
+        border-radius: 0.5rem;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+    .loginregisterContent {
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        input[type=text], input[type=password] {
+            margin-bottom: 2rem;
+            width: 100%;
+            @media screen and (max-height: 590px) {
+                margin-bottom: 1rem
+            }
+        }
+        input[type=checkbox] {
+            margin-right: 1rem;        
+        }
+        button {
+            width: 100%;
+        } 
+        .loginregisterActions {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            @media screen and (max-height: 590px) {
+                margin-bottom: 1rem
+            }
+            .remindMe {
+                display: flex;
+                align-items: center;
+            }
+            .accepting {
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: underline !important;
+                }
+            }
+        }
+    }
+}
+
+.commentsContainer {
+    border: 1px solid $ufborder;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    .commentsConcent {
+        padding: 1rem;
+        .post:not(:last-of-type) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+.settings {
+    height: 100vh;
+    overflow: hidden;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .settingsContainer {
+            width: 75%;
+            max-height: calc(100vh - 75px - 2rem);
+            border: 1px solid $ufborder;
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+            }
+            .settingsContent {
+                padding: 1rem;
+                padding-bottom: 0;
+                overflow-y: auto;
+                .settingsProfileContainer {
+                    border: 1px solid $ufborder;
+                    border-radius: 0.5rem;
+                    margin-bottom: 1rem;
+                    .profileOverview {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 1rem;
+                        padding-bottom: 1rem;
+                        img {
+                            width: 75px;
+                            border-radius: 50%;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                    .settingsProfile {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        padding: 1rem;
+                        button {
+                            @media screen and (max-width: 767px) {
+                                width: 100%;
+                                &:not(:last-of-type) {
+                                    margin-bottom: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .changeNickname, .changeProfilePhoto, .changePassword, .changeMail {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid $ufborder;
+            border-radius: 0.5rem;
+            background: $ufwhite;
+            flex-direction: column;
+            width: 50%;
+            @media screen and (max-width: 767px) {
+                width: calc(100% - 2rem);
+            }
+            .changeNicknameContent, .changeProfilePhotoContent, .changePasswordContent, .changeMailContent {
+                padding: 1rem;
+                input {
+                    width: 100%;
+                }
+                .changeNicknameActions, .changeProfilePhotoActions, .changePasswordActions, .changeMailActions {
+                    margin-top: 1rem;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+            .changeProfilePhotoContent {
+                p {
+                    margin-bottom: 1rem !important;
+                    text-align: center;
+                }
+            }
+            .changePasswordContent, .changeMailContent {
+                input:not(:last-of-type) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+.write {
+    height: 100vh;
+    .container {
+        display: flex;
+        justify-content: center;
+    }
+    .writeContainer {
+        height: calc(100vh - 75px - 2rem);
+        width: 75%;
+        border: 1px solid $ufborder;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+        .writeContent {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            overflow-y: auto;
+            input {
+                margin-bottom: 2rem;
+            }
+            textarea {
+                border: 1px solid $ufborder;
+                border-radius: 0.5rem;
+                background: $ufgray;
+                padding: 0.5rem;
+            }
+            button {
+                margin-top: 2rem;
+            }
+        }
+    }
+    .confirmation {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid $ufborder;
+        border-radius: 0.5rem;
+        background: $ufwhite;
+        flex-direction: column;
+        width: 50%;
+        @media screen and (max-width: 767px) {
+            width: calc(100% - 2rem);
+        }
+        .confirmationContainer {
+            padding: 1rem;
+            p {
+                text-align: center;
+            }
+            .confirmationActions {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+            }
+        }    
+    }
+}

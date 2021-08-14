@@ -1,0 +1,1095 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 1;
+  font-family: 'PT Sans', sans-serif;
+  overflow: auto;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:focus {
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  color: #000000 !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #00CC08 !important;
+}
+
+a.like {
+  color: #EC0000 !important;
+}
+
+a.comment {
+  color: #00CC08 !important;
+}
+
+* {
+  text-transform: lowercase;
+}
+
+input {
+  padding: 0.5rem;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+}
+
+input:focus {
+  border-color: #00CC08;
+}
+
+input.searchInput {
+  padding: 0.5rem;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #C4C4C4;
+  border-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+input.searchInput:focus {
+  border-color: #00CC08;
+}
+
+button.btnType1 {
+  padding: 0.5rem;
+  border: 1px solid #00CC08;
+  border-radius: 0.5rem;
+  background: #00CC08;
+  color: #FFFFFF !important;
+}
+
+button.btnType1:hover {
+  border-color: #C4C4C4;
+  background: #FFFFFF;
+  color: #000000 !important;
+}
+
+button.btnType1:hover a {
+  color: #000000 !important;
+}
+
+button.btnType1 a {
+  color: #FFFFFF !important;
+}
+
+button.btnType2 {
+  padding: 0.5rem;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  background: #FFFFFF;
+  color: #000000 !important;
+}
+
+button.btnType2:hover {
+  border-color: #00CC08;
+  background: #00CC08;
+  color: #FFFFFF !important;
+}
+
+button.btnType2:hover a {
+  color: #FFFFFF !important;
+}
+
+button.btnType2 a {
+  color: #000000 !important;
+}
+
+button.btnSearch {
+  padding: 0.5rem;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #C4C4C4;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+button.btnSearch:hover {
+  border-color: #00CC08;
+}
+
+button.btnSearchMobile, button.btnNavigationMobile, .btnClose {
+  padding: 0.5rem;
+  color: #000000;
+  background: #F2F2F2;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+button.btnSearchMobile:hover, button.btnNavigationMobile:hover, .btnClose:hover {
+  border-color: #00CC08;
+}
+
+button.btnClose {
+  margin: 0;
+}
+
+button.btnTypeCancel {
+  padding: 0.5rem;
+  border: 1px solid #EC0000;
+  border-radius: 0.5rem;
+  background: #EC0000;
+  color: #FFFFFF !important;
+}
+
+button.btnTypeCancel:hover {
+  border-color: #C4C4C4;
+  background: #FFFFFF;
+  color: #000000 !important;
+}
+
+button.btnTypeCancel:hover a {
+  color: #000000 !important;
+}
+
+button.btnTypeCancel a {
+  color: #FFFFFF !important;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  height: 75px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #C4C4C4;
+  background: #FFFFFF;
+}
+
+header .brand, header .search, header .navigation, header .brandMobile, header .searchMobileButton, header .navitagionMobileButton {
+  width: 33.3333333%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .brand {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header .brand a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .brand a img {
+  width: 50px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+header .brandMobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+header .brandMobile img {
+  width: 50px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+header .search {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  header .search {
+    display: none;
+  }
+}
+
+header .search .searchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .search .searchContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .searchMobileButton {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  header .searchMobileButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+header .searchMobile {
+  display: none;
+  width: 100%;
+  z-index: 101;
+}
+
+header .searchMobile .searchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+header .searchMobile .searchContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navigation {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+  header .navigation {
+    display: none;
+  }
+}
+
+header .navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navigation ul li {
+  margin-right: 1rem;
+}
+
+header .navitagionMobileButton {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  header .navitagionMobileButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+header .navigationMobileContainer {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  header .navigationMobileContainer {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+  }
+}
+
+header .navigationMobileContainer .navigationMobile ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .navigationMobileContainer .navigationMobile ul li:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+header .navigationMobileContainer .brandMobile, header .navigationMobileContainer .searchMobileButton, header .navigationMobileContainer .navigationMobileButton {
+  width: 33.3333333%;
+}
+
+header.desktopHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  header.desktopHeader {
+    display: none;
+  }
+}
+
+header.mobileHeader {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  header.mobileHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.container {
+  margin-top: calc(75px + 1rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.contentHeader {
+  height: 75px;
+  width: 100%;
+  padding: 1rem;
+  border-bottom: 1px solid #C4C4C4;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.leftMenu {
+  width: 30%;
+}
+
+@media screen and (max-width: 767px) {
+  .leftMenu {
+    width: 100%;
+  }
+}
+
+.popularStates {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.popularStates ul {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.popularStates ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFFFF;
+}
+
+.popularStates ul li:nth-child(even) {
+  background: #F2F2F2;
+}
+
+.popularStates ul li:last-of-type {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.popularStates ul li a {
+  padding: 1rem;
+  width: 100%;
+}
+
+.popularStates ul li a:last-of-type {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.unfr1endList {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-left: 9.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .unfr1endList {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0;
+    margin-top: 2rem;
+  }
+}
+
+.unfr1endList .advertising {
+  margin-bottom: 2rem;
+}
+
+.unfr1endList ul li {
+  margin-bottom: 2rem;
+}
+
+.home .unfr1endList {
+  margin: 0;
+}
+
+.singlePost .unfr1endList {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 9.4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .singlePost .unfr1endList {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.singlePost .unfr1endList .advertising {
+  margin-top: 0rem;
+}
+
+@media screen and (max-width: 767px) {
+  .singlePost .unfr1endList .advertising {
+    margin-top: 2rem;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .singlePost .unfr1endList .post {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+
+.singlePost .unfr1endList .commentsContainer {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.singlePost .unfr1endList ul li {
+  margin-bottom: 2rem;
+}
+
+.post {
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.post .postHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.post .postHeader .actions a i {
+  font-size: 1.5rem;
+}
+
+.post .postHeader .actions a:first-of-type {
+  margin-right: 1rem;
+}
+
+.post .postContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post .postContent p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.post .postContent .btnType1 {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.singlePost .postContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singlePost .postContent p {
+  overflow: visible;
+  display: block;
+}
+
+.singlePost .postContent .btnType1 {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.loginregister {
+  height: 100vh;
+}
+
+.loginregister .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: calc(100vh - 75px - 1rem);
+  padding-bottom: 1rem;
+}
+
+.loginregister .loginregisterContainer {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .loginregister .loginregisterContainer {
+    width: 100%;
+  }
+}
+
+.loginregister .loginregisterContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+.loginregister .loginregisterContent input[type=text], .loginregister .loginregisterContent input[type=password] {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-height: 590px) {
+  .loginregister .loginregisterContent input[type=text], .loginregister .loginregisterContent input[type=password] {
+    margin-bottom: 1rem;
+  }
+}
+
+.loginregister .loginregisterContent input[type=checkbox] {
+  margin-right: 1rem;
+}
+
+.loginregister .loginregisterContent button {
+  width: 100%;
+}
+
+.loginregister .loginregisterContent .loginregisterActions {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-height: 590px) {
+  .loginregister .loginregisterContent .loginregisterActions {
+    margin-bottom: 1rem;
+  }
+}
+
+.loginregister .loginregisterContent .loginregisterActions .remindMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginregister .loginregisterContent .loginregisterActions .accepting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loginregister .loginregisterContent .loginregisterActions .accepting a {
+  text-decoration: underline !important;
+}
+
+.commentsContainer {
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+}
+
+.commentsContainer .commentsConcent {
+  padding: 1rem;
+}
+
+.commentsContainer .commentsConcent .post:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.settings {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.settings .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.settings .container .settingsContainer {
+  width: 75%;
+  max-height: calc(100vh - 75px - 2rem);
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .settings .container .settingsContainer {
+    width: 100%;
+  }
+}
+
+.settings .container .settingsContainer .settingsContent {
+  padding: 1rem;
+  padding-bottom: 0;
+  overflow-y: auto;
+}
+
+.settings .container .settingsContainer .settingsContent .settingsProfileContainer {
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.settings .container .settingsContainer .settingsContent .settingsProfileContainer .profileOverview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.settings .container .settingsContainer .settingsContent .settingsProfileContainer .profileOverview img {
+  width: 75px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.settings .container .settingsContainer .settingsContent .settingsProfileContainer .settingsProfile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .settings .container .settingsContainer .settingsContent .settingsProfileContainer .settingsProfile button {
+    width: 100%;
+  }
+  .settings .container .settingsContainer .settingsContent .settingsProfileContainer .settingsProfile button:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+}
+
+.settings .container .changeNickname, .settings .container .changeProfilePhoto, .settings .container .changePassword, .settings .container .changeMail {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  background: #FFFFFF;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .settings .container .changeNickname, .settings .container .changeProfilePhoto, .settings .container .changePassword, .settings .container .changeMail {
+    width: calc(100% - 2rem);
+  }
+}
+
+.settings .container .changeNickname .changeNicknameContent, .settings .container .changeNickname .changeProfilePhotoContent, .settings .container .changeNickname .changePasswordContent, .settings .container .changeNickname .changeMailContent, .settings .container .changeProfilePhoto .changeNicknameContent, .settings .container .changeProfilePhoto .changeProfilePhotoContent, .settings .container .changeProfilePhoto .changePasswordContent, .settings .container .changeProfilePhoto .changeMailContent, .settings .container .changePassword .changeNicknameContent, .settings .container .changePassword .changeProfilePhotoContent, .settings .container .changePassword .changePasswordContent, .settings .container .changePassword .changeMailContent, .settings .container .changeMail .changeNicknameContent, .settings .container .changeMail .changeProfilePhotoContent, .settings .container .changeMail .changePasswordContent, .settings .container .changeMail .changeMailContent {
+  padding: 1rem;
+}
+
+.settings .container .changeNickname .changeNicknameContent input, .settings .container .changeNickname .changeProfilePhotoContent input, .settings .container .changeNickname .changePasswordContent input, .settings .container .changeNickname .changeMailContent input, .settings .container .changeProfilePhoto .changeNicknameContent input, .settings .container .changeProfilePhoto .changeProfilePhotoContent input, .settings .container .changeProfilePhoto .changePasswordContent input, .settings .container .changeProfilePhoto .changeMailContent input, .settings .container .changePassword .changeNicknameContent input, .settings .container .changePassword .changeProfilePhotoContent input, .settings .container .changePassword .changePasswordContent input, .settings .container .changePassword .changeMailContent input, .settings .container .changeMail .changeNicknameContent input, .settings .container .changeMail .changeProfilePhotoContent input, .settings .container .changeMail .changePasswordContent input, .settings .container .changeMail .changeMailContent input {
+  width: 100%;
+}
+
+.settings .container .changeNickname .changeNicknameContent .changeNicknameActions, .settings .container .changeNickname .changeNicknameContent .changeProfilePhotoActions, .settings .container .changeNickname .changeNicknameContent .changePasswordActions, .settings .container .changeNickname .changeNicknameContent .changeMailActions, .settings .container .changeNickname .changeProfilePhotoContent .changeNicknameActions, .settings .container .changeNickname .changeProfilePhotoContent .changeProfilePhotoActions, .settings .container .changeNickname .changeProfilePhotoContent .changePasswordActions, .settings .container .changeNickname .changeProfilePhotoContent .changeMailActions, .settings .container .changeNickname .changePasswordContent .changeNicknameActions, .settings .container .changeNickname .changePasswordContent .changeProfilePhotoActions, .settings .container .changeNickname .changePasswordContent .changePasswordActions, .settings .container .changeNickname .changePasswordContent .changeMailActions, .settings .container .changeNickname .changeMailContent .changeNicknameActions, .settings .container .changeNickname .changeMailContent .changeProfilePhotoActions, .settings .container .changeNickname .changeMailContent .changePasswordActions, .settings .container .changeNickname .changeMailContent .changeMailActions, .settings .container .changeProfilePhoto .changeNicknameContent .changeNicknameActions, .settings .container .changeProfilePhoto .changeNicknameContent .changeProfilePhotoActions, .settings .container .changeProfilePhoto .changeNicknameContent .changePasswordActions, .settings .container .changeProfilePhoto .changeNicknameContent .changeMailActions, .settings .container .changeProfilePhoto .changeProfilePhotoContent .changeNicknameActions, .settings .container .changeProfilePhoto .changeProfilePhotoContent .changeProfilePhotoActions, .settings .container .changeProfilePhoto .changeProfilePhotoContent .changePasswordActions, .settings .container .changeProfilePhoto .changeProfilePhotoContent .changeMailActions, .settings .container .changeProfilePhoto .changePasswordContent .changeNicknameActions, .settings .container .changeProfilePhoto .changePasswordContent .changeProfilePhotoActions, .settings .container .changeProfilePhoto .changePasswordContent .changePasswordActions, .settings .container .changeProfilePhoto .changePasswordContent .changeMailActions, .settings .container .changeProfilePhoto .changeMailContent .changeNicknameActions, .settings .container .changeProfilePhoto .changeMailContent .changeProfilePhotoActions, .settings .container .changeProfilePhoto .changeMailContent .changePasswordActions, .settings .container .changeProfilePhoto .changeMailContent .changeMailActions, .settings .container .changePassword .changeNicknameContent .changeNicknameActions, .settings .container .changePassword .changeNicknameContent .changeProfilePhotoActions, .settings .container .changePassword .changeNicknameContent .changePasswordActions, .settings .container .changePassword .changeNicknameContent .changeMailActions, .settings .container .changePassword .changeProfilePhotoContent .changeNicknameActions, .settings .container .changePassword .changeProfilePhotoContent .changeProfilePhotoActions, .settings .container .changePassword .changeProfilePhotoContent .changePasswordActions, .settings .container .changePassword .changeProfilePhotoContent .changeMailActions, .settings .container .changePassword .changePasswordContent .changeNicknameActions, .settings .container .changePassword .changePasswordContent .changeProfilePhotoActions, .settings .container .changePassword .changePasswordContent .changePasswordActions, .settings .container .changePassword .changePasswordContent .changeMailActions, .settings .container .changePassword .changeMailContent .changeNicknameActions, .settings .container .changePassword .changeMailContent .changeProfilePhotoActions, .settings .container .changePassword .changeMailContent .changePasswordActions, .settings .container .changePassword .changeMailContent .changeMailActions, .settings .container .changeMail .changeNicknameContent .changeNicknameActions, .settings .container .changeMail .changeNicknameContent .changeProfilePhotoActions, .settings .container .changeMail .changeNicknameContent .changePasswordActions, .settings .container .changeMail .changeNicknameContent .changeMailActions, .settings .container .changeMail .changeProfilePhotoContent .changeNicknameActions, .settings .container .changeMail .changeProfilePhotoContent .changeProfilePhotoActions, .settings .container .changeMail .changeProfilePhotoContent .changePasswordActions, .settings .container .changeMail .changeProfilePhotoContent .changeMailActions, .settings .container .changeMail .changePasswordContent .changeNicknameActions, .settings .container .changeMail .changePasswordContent .changeProfilePhotoActions, .settings .container .changeMail .changePasswordContent .changePasswordActions, .settings .container .changeMail .changePasswordContent .changeMailActions, .settings .container .changeMail .changeMailContent .changeNicknameActions, .settings .container .changeMail .changeMailContent .changeProfilePhotoActions, .settings .container .changeMail .changeMailContent .changePasswordActions, .settings .container .changeMail .changeMailContent .changeMailActions {
+  margin-top: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.settings .container .changeNickname .changeProfilePhotoContent p, .settings .container .changeProfilePhoto .changeProfilePhotoContent p, .settings .container .changePassword .changeProfilePhotoContent p, .settings .container .changeMail .changeProfilePhotoContent p {
+  margin-bottom: 1rem !important;
+  text-align: center;
+}
+
+.settings .container .changeNickname .changePasswordContent input:not(:last-of-type), .settings .container .changeNickname .changeMailContent input:not(:last-of-type), .settings .container .changeProfilePhoto .changePasswordContent input:not(:last-of-type), .settings .container .changeProfilePhoto .changeMailContent input:not(:last-of-type), .settings .container .changePassword .changePasswordContent input:not(:last-of-type), .settings .container .changePassword .changeMailContent input:not(:last-of-type), .settings .container .changeMail .changePasswordContent input:not(:last-of-type), .settings .container .changeMail .changeMailContent input:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+.write {
+  height: 100vh;
+}
+
+.write .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.write .writeContainer {
+  height: calc(100vh - 75px - 2rem);
+  width: 75%;
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .write .writeContainer {
+    width: 100%;
+  }
+}
+
+.write .writeContainer .writeContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.write .writeContainer .writeContent input {
+  margin-bottom: 2rem;
+}
+
+.write .writeContainer .writeContent textarea {
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  background: #F2F2F2;
+  padding: 0.5rem;
+}
+
+.write .writeContainer .writeContent button {
+  margin-top: 2rem;
+}
+
+.write .confirmation {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid #C4C4C4;
+  border-radius: 0.5rem;
+  background: #FFFFFF;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .write .confirmation {
+    width: calc(100% - 2rem);
+  }
+}
+
+.write .confirmation .confirmationContainer {
+  padding: 1rem;
+}
+
+.write .confirmation .confirmationContainer p {
+  text-align: center;
+}
+
+.write .confirmation .confirmationContainer .confirmationActions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+/*# sourceMappingURL=style.css.map */
